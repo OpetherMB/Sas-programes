@@ -1,0 +1,5 @@
+#wanted polluant (Valeur attendu : concentration de fond ou -1 si on l'utilise pas)
+"NOx" : 30
+"NO2" : 22
+"PM10" : 21
+"PM2.5" : 14

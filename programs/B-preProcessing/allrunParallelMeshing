@@ -1,0 +1,49 @@
+#!/bin/bash
+#cd ${0%/*} || exit 1
+
+. $WM_PROJECT_DIR/bin/tools/RunFunctions
+application='getApplication'
+
+source /opt/openfoam5/etc/bashrc
+
+foamCleanPolyMesh >> log.1_FoamCleanPolyMesh
+surfaceFeatureExtract >> log.2_SurfaceFeatureExtract
+blockMesh >> log.3_BlockMesh
+decomposePar >> log.4_DecomposePar
+mpirun -np 10 snappyHexMesh -parallel >> log.5_SnappyHexMesh
+reconstructParMesh -latestTime -mergeTol 1e-6 >> log.6_ReconstructParMesh
+cp -r 1/polyMesh constant/ 
+rm -r proc*
+rm -r 1 
+
+checkMesh -allGeometry >> log.7_CheckMeshAllGeometry
+
+#verify if there is only one region, if there are several, choose the biggest one and remove the others
+if [ -f "constant/polyMesh/sets/region0" ]; then
+
+
+	cd "constant/polyMesh/sets"
+	for file in $(ls); do
+	
+
+		if [[ "$file" == "region"* ]]; then
+
+			echo "$file"
+
+			if [[ $start_nb_mesh < $(sed '19q;d' $file) ]]; then
+
+				start_nb_mesh=$(sed '19q;d' $file)
+				biggest_region=$file
+
+			fi
+		fi
+
+	done
+	cd ../../..
+	subsetMesh $biggest_region >> log.8_SubsetMesh
+	cp -a 1/polyMesh/. constant/polyMesh/
+	rm -r 1
+
+fi
+
+topoSet >> log.9_TopoSet

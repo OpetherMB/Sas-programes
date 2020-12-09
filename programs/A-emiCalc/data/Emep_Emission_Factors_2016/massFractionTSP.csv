@@ -1,0 +1,6 @@
+Pollutant,FM TSP Tyre [%],FM TSP Brake [%],FM TSP Road [%]
+TSP,1,1,1
+PM10,0.6,0.98,0.5
+PM2.5,0.42,0.39,0.27
+PM1,0.06,0.1,NA
+PM0.1,0.048,0.08,NA

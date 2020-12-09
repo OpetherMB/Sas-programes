@@ -1,0 +1,41 @@
+#name of road (ex : inletPol1)
+"nameRoadSimulation" :	inletPol1
+
+#Calculation method
+"method" : 	daily		#Calculation method choice			[-]		choices : hourly, daily				
+"massUnit" :	µg		#Choice of the mass unit			[-]		choices : t, kg, g, mg, µg
+"timeUnit" :	s		#Choice of the time unit			[-]		choices : y, d, h, m, s
+
+#Trafic information for daily method (if method = daily)
+"nb_veh_d" : 	1		#Number of vehicles				[-]		
+"v_L_d" : 	30		#L, LV and LCV speed 				[km/h]
+"v_H_d" :	30		#B and HDT speed 				[km/h] 
+
+
+#Trafic information for hourly method (if method = hourly)
+"nb_veh_h" : 	1113,801,471,285,238,311,480,525,888,1518,2164,3064,2738,2496,2964,3252,3595,4077,4147,3359,2427,1744,1274,783			#Number of vehicles for each hour	[-]		
+"v_L_h" : 	92,93,93,95,96,97,96,94,93,92,90,89,91,92,91,90,90,88,87,88,92,92,92,93							 	#L, LV and LCV speed 			[km/h]
+"v_H_h" :	90,90,90,90,90,90,90,90,90,90,90,89,90,90,90,90,90,88,87,88,90,90,90,90								#B and HDT speed 			[km/h] 
+
+
+#Vehicles information
+"stock" :	2017		#Year of CITEPA's stock selected		[-]		choices : 2015, 2017
+"w_LV" : 	71.08		#Percentage of Light Vehicles 			[%]
+"w_LCV"	:	16.71		#Percentage of Light Commercial Vehicles 	[%]
+"w_B":		0.22		#Percentage of Bus 				[%]
+"w_HDT" :	4		#Percentage of High Duty Trucks			[%]
+"w_L" :		7.99		#Percentage of L-Category			[%]
+
+
+#Road information 
+"dist" :	0.001		#Traveled distance  				[km]
+"sloap" : 	0		#Avereaged sloap of the road 			[cm/m] 		choices : neg6, neg4, neg2, 0, 2, 4, 6
+"load" :	50		#Avereaged load of the trucks 			[%] 		choices : 0, 50, 100
+
+
+#Cold-stard emission calculation information
+"cold" :	0		#Perc. of vehicles driving with cold engine	[%]
+"trip" :	100		#Perc. of distance drived with cold engine	[%]
+"temp" :	13		#Ambiant temperature				[°C]
+"forceCold" :	no		#Force cold emission if V>45			[-]		choices : yes, no
+"speedFC" :	45		#Speed for force cold emission if V>45		[km/h]

@@ -1,0 +1,27 @@
+### La première valeur correspond au min et la dernière valeur au max pour l'échelle de couleur alors de vert à rouge. 
+### Les valeurs doivent être séparé par des virgules
+
+#scale for NO2 (Par défaut 20 pour le min et 40 pour le max (critère de moyenn annuelle OMS/EU))
+"scale_NO2":15,30
+
+#scale for NOx (Par défaut 30 pour le min et 70 pour le max (correspondant au seuil et 20 et 40 pour le NO2 après passage par le loi de Derwent et Middleton))
+"scale_NOx":30,70
+
+#scale for PM10 (Par défaut 20 (critère de moyenne annuelle OMS) pour le min et 40 pour le max (critère de moyenne annuelle EU))
+"scale_PM10":10,20
+
+#scale for PM2.5 (Par défaut 10 (critère de moyenne annuelle OMS) pour le min et 25 pour le max (critère de moyenne annuelle EU))
+"scale_PM2-5":10,15
+
+#pixel
+"image_size":800,800
+
+#format de l'image
+"format_image":png
+
+#hsv scale (Ne pas changer sauf si l'on comprend pourquoi, 0 correspond au rouge et 120 au vert)
+"scale_hsv":0,120
+
+#couleur des batiments
+"color_building":70,70,70
+

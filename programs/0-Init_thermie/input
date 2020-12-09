@@ -1,0 +1,7 @@
+### Input file for multiSourceSolverBuilder
+
+"path" : /home/jurado/OpenFOAM/jurado-6/application/solver	# Directory where the output files are sent
+
+# permits to create solvers from Nmin to Nmax sources
+"Nmax" : 100        						# Number of max sources wanted
+"Nmin" : 1        						# number of min sources 

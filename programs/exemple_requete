@@ -1,0 +1,52 @@
+########## requete EmiCalc ##################################################################################################################
+
+python3 emiCalcPy.py \
+-p_output /home/jurado/Documents/Exemple_Orisun_multiRoutes/emission_computation \
+-p_input /home/jurado/Documents/Exemple_Orisun_multiRoutes/emission_computation 
+
+
+########## requete preProcessing #############################################################################################################
+
+python3 urban_multiDirectional_meshing.py \
+-p_working /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir \
+-p_config /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/B-preProcessing/computationDict \
+-np_mesh 10 \
+-snappy_enable false
+
+
+########## requete processing ################################################################################################################
+
+bash allDirectionComputation.sh -p /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir -e test_1 -n 10 -s 1.5 
+
+
+########## requete concaténation multi sources ################################################################################################################
+
+python3 meanMultipleSourcesAndConcatenationV3.py \
+-p_working /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir \
+-p_output  /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir/probes_treated
+
+
+########## requete probesmeanYear ################################################################################################################
+
+python3 probesMeanYear_V2_InverseLaw_16-01-2020.py \
+-p_config /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/E-probesMeanYear/config \
+-p_freq /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/E-probesMeanYear/frequencesVent \
+-p_sigmo /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/E-probesMeanYear/parametresSigmoide \
+-p_working /media/jurado/99419f72-49a4-4003-8cc7-bccbe029b579/Etude_Air/2020/Da_Vinci_centre \
+-p_probes_treated /media/jurado/99419f72-49a4-4003-8cc7-bccbe029b579/Etude_Air/2020/Da_Vinci_centre/probes_treated
+
+
+########## requete creation images des cartes ################################################################################################################
+
+python3 creation_pollutant_maps_v2.py \
+-p_scale /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/F-image_creation/scale_for_colors \
+-p_treated_data /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir/probes_treated
+
+
+########## requete creation images des cartes ################################################################################################################
+
+python3 creation_pollutant_maps_v3.py \
+-p_scale /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/F-image_creation/scale_for_colors \
+-p_treated_data /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir/probes_treated \
+-p_logo /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/F-image_creation/Logo_airetd.png
+

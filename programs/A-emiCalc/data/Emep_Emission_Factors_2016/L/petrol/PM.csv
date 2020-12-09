@@ -1,0 +1,7 @@
+﻿Name,Pente (%),Charge (%),Vitesse min. (km/h),Vitesse max. (km/h),Alpha,Beta,Gamma,Delta,Epsilon,Zeta,Eta,RF
+DR_ESSENCE_EURO1_PM,,,10,110,0,0,0.02,0,0,0,1,0
+DR_ESSENCE_EURO2_PM,,,10,110,0,0,0.005,0,0,0,1,0
+DR_ESSENCE_EURO3_PM,,,10,110,0,0,0.005,0,0,0,1,0
+DR_ESSENCE_EURO4_PM,,,10,110,0,0,0.005,0,0,0,1,0
+DR_ESSENCE_EURO5_PM,,,10,110,0,0,0.005,0,0,0,1,0
+DR_ESSENCE_EURO6_PM,,,10,110,0,0,0,0,0,0,1,0

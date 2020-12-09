@@ -1,0 +1,5 @@
+﻿Name,Vitesse min. (km/h),Vitesse max. (km/h),A,B,C
+LV_Petrol_NOx_5_25,5,25,4.58E-2,7.47E-3,0.764
+LV_Petrol_NOx_25_45,25,45,4.84E-2,2.28E-2,0.685
+LCV_Petrol_NOx_5_25,5,25,3.43E-2,5.66E-3,0.827
+LCV_Petrol_NOx_25_45,25,45,3.75E-2,1.72E-2,0.728

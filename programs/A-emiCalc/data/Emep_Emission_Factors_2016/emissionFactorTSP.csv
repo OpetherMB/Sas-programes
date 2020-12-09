@@ -1,0 +1,5 @@
+Type [-],EF TSP Tyre [g/km],EF TSP Brake [g/km],EF TSP Road [g/km]
+L-category,0.0053,0.005,0.006
+LV,0.0162,0.0100,0.0150
+LDT,0.0217,0.0145,0.0150
+HDT,NA,NA,0.0760

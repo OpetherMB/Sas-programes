@@ -1,0 +1,45 @@
+########## requete EmiCalc ##################################################################################################################
+
+python3 emiCalcPy.py \
+-p_output /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane \
+-p_input /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane 
+
+
+########## requete preProcessing #############################################################################################################
+
+python3 urban_multiDirectional_meshing_V2.py \
+-p_working /mnt/hardDiskDrive_4T/Etude_IA/quartier_test \
+-p_config /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/B-preProcessing/computationDict \
+-np_mesh 5 \
+-snappy_enable false
+
+
+########## requete processing ################################################################################################################
+
+bash allDirectionComputation.sh -p /home/jurado/Documents/Exemple_Orisun_multiRoutes/working_dir -e test_1 -n 10 -s 1.5 
+
+
+########## requete concaténation multi sources ################################################################################################################
+
+python3 meanMultipleSourcesAndConcatenation.py \
+-p_working /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane \
+-p_output  /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane/probes_treated
+
+
+########## requete probesmeanYear ################################################################################################################
+
+python3 probesMeanYear.py \
+-p_config /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/E-probesMeanYear/config \
+-p_freq /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/E-probesMeanYear/frequencesVent \
+-p_sigmo /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/E-probesMeanYear/parametresSigmoide \
+-p_working /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane \
+-p_probes_treated /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane/probes_treated
+
+
+########## requete creation images des cartes ################################################################################################################
+
+python3 creation_pollutant_maps.py \
+-p_scale /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane/settings_for_images \
+-p_treated_data /home/jurado/Documents/Exemple_Orisun_multiRoutes/test_marouane/probes_treated \
+-p_logo /home/jurado/Documents/Exemple_Orisun_multiRoutes/programs/F-image_creation/Logo_airetd.png
+

@@ -1,0 +1,3 @@
+﻿Name,Vitesse min. (km/h),Vitesse max. (km/h),ratio,temperature based correction factor
+LV_LCV_Diesel_NOx,5,45,1.3,0.013
+LV_LCV_Diesel_PM,5,45,3.1,0.1

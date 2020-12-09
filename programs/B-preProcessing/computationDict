@@ -1,0 +1,23 @@
+#nombre de coeurs pour le maillage
+"nb_proc_meshing": 10
+
+#Taille des plus grosse mailles (en m)
+"biggest_mesh_size": 32
+
+#Raffinement routes - de la forme -> (distance;niveau_raffinement)
+"refinement_road": (1;5)
+
+#Raffinement batiments - de la forme -> (distance;niveau_raffinement)
+"refinement_block": (1.5;5),(4.5;4),(10.5;3),(18.5;2),(38;1)
+
+#Raffinement sol - de la forme -> (distance niveau_raffinement)
+"refinement_ground": (2;4),(10;3),(30;2),(70;1)
+
+#Nombre de couches
+"nb_refinement_layer": 3
+
+#zRef (en m)
+"z_reference": 300
+
+#Von Karman Constant (en m)
+"von_karman_constant": 0.41

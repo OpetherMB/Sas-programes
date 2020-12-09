@@ -1,0 +1,27 @@
+# lancer salome8.3.0
+alias salome-8.3.0='python2.7 /home/jurado/Documents/SALOME-8.3.0-UB16.04/salome'
+
+#se connecter sur le serveur hpc
+alias hpcLoginOld='sshpass -p "eequee2kahTh" ssh -o StrictHostKeyChecking=no xjurado@hpc-login'
+
+#se connecter sur le serveur hpc
+alias hpcLogin='ssh -Y xjurado@hpc-login'
+
+# RapidCFD
+alias RapidCFD='/home/jurado/RapidCFD/RapidCFD-dev/etc/bashrc'
+
+#Maillage en parallèle automatisé
+alias allRunParallelMeshing='/home/jurado/OpenFOAM/jurado-5.0/run/Batch_Slurm/allRunParallelMeshing.sh'
+
+#Lancement de calcul automatisé
+alias allRunParallelComputation='/home/jurado/OpenFOAM/jurado-5.0/run/Batch_Slurm/allRunParallelComputation.sh'
+
+
+# Alias definitions.
+# You may want to put all your additions into a separate file like
+# ~/.bash_aliases, instead of adding them here directly.
+# See /usr/share/doc/bash-doc/examples in the bash-doc package.
+
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi

@@ -1,0 +1,3 @@
+Pour creation_polluant_file_from_simulations_and_trafic.py :
+
+python3 creation_polluant_file_from_simulations_and_trafic_07-01-2020.py -p_pol_fond /home/jurado/Documents/scriptProbesPostProcessing/script_creation_polluant/pollution_fond -p_emission /home/jurado/Documents/scriptProbesPostProcessing/script_creation_polluant/results -p_simu /home/jurado/Documents/scriptProbesPostProcessing/script_creation_polluant/probes/s/resultConcentration/CmoyMoyYear -p_output /home/jurado/Documents/scriptProbesPostProcessing/script_creation_polluant/output

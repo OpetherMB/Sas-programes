@@ -1,0 +1,8 @@
+#vitesse limite pour laquelle on considère que la turbulence du vent est compensé par la turbulence des voitures et/ou de la température
+"v_seuil_min":1.1
+
+#vitesse pour laquelle on considère que la pollution devient négligeable 
+"v_seuil_max":30
+
+#ratio par lequel on va multiplier le vitesse seuil max pour considérer l'infini
+"ratio_for_max_speed":5

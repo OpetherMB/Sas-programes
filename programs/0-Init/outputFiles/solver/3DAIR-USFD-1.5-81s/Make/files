@@ -1,0 +1,4 @@
+3DAIR-USFD-1.5-81s.C
+powerLawVelocityFvPatchVectorField.C
+
+EXE = $(FOAM_USER_APPBIN)/3DAIR-USFD-1.5-81s
